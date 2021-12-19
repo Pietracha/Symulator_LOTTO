@@ -1,11 +1,25 @@
+"""
+Program asks user to enter 6 numbers in range 1-49.
+Then program draw 6 random numbers in the same range and compares with user's numbers.
+If there are any matching numbers, computer returns amount of hits.
+"""
 from random import randint
 
 def input_function(i):
+    """
+    Function that receives numbers from user. In loop, executed 6 times.
+    :param i: int, received from main lotto function
+    :return: int
+    """
     input_number = input(f"Enter a number ({i+1}): ")
     return input_number
 
 
 def lotto():
+    """
+    Main function that exectues input_function and all other instructions
+    :return: 2 lists: user's and computer's list, number of hits
+    """
     lista_1 = []  # Player's list
     lista_2 = []  # Computer's list
     lista_3 = []  # List of matching numbers
@@ -27,7 +41,7 @@ def lotto():
     for _ in range (6): # Creating computer's list
         while True:
             liczba_2 = randint(1,49)
-            if liczba_2 not in lista_2: # Making sure that there are no two identical values in the list
+            if liczba_2 not in lista_2: # Checking if there are no two identical values in the list
                 lista_2.append(liczba_2)
                 break
     lista_2.sort() # Sorting computer's list
