@@ -1,6 +1,6 @@
 """
 Program asks user to enter 6 numbers in range 1-49.
-Then program draw 6 random numbers in the same range and compares with user's numbers.
+Then program draws 6 random numbers within the same range and compares with user's numbers.
 If there are any matching numbers, computer returns amount of hits.
 """
 from random import randint
@@ -54,4 +54,5 @@ def lotto():
     print(f"You have hit {hits} number(s)")
 
 
-lotto()
+if __name__ == '__main__':
+    lotto()
